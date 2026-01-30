@@ -47,7 +47,7 @@
     <div class="shopBoxSearch">
         <input type="search" name="q" id="shopSearch" placeholder="Rechercher sur le site…">
     </div>
-    <!-- CLOTHING -->
+    <!-- PRODUIT -->
     <div class="cloth">
         <?php
             $manager = new BoutiqueManager($db);

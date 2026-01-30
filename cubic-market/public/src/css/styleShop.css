@@ -1,7 +1,7 @@
 .shopBoxSearch {
-    width: 100%;
+    width: 70%;
     height: auto;
-    background: #A07855;
+    margin: auto;
 }
 
 /* SEARCH */
@@ -13,7 +13,7 @@
     text-align: center;
     border: 4px solid #4B3621;
     border-radius: 40px;
-    background: #A07855;
+    background: transparent;
 }
 
 #shopSearch:invalid ~ span::after {
@@ -125,7 +125,7 @@
 
 .nameProduct {
     font-size: 1em;
-    max-width: 75%;
+    max-width: 70%;
     width: 100%;
     color: #4B3621;
     padding: 0.45em 0.85em;
@@ -144,7 +144,7 @@
 
 .priceProduct {
     font-size: 1em;
-    max-width: 25%;
+    max-width: 30%;
     color: #4B3621;
     padding: 0.45em 0.95em;
     border-radius: 8px;
