@@ -37,3 +37,5 @@ Class Armure extends Produit {
         return $this;
     }
 }
+
+?>

@@ -83,6 +83,29 @@ Class BoutiqueManager {
         return $produitAll;
     }
 
+    // Recherche élément
+    public function getAllSearch($var){
+        $produitAll = [];
+        $request = "SELECT * FROM produit WHERE nom LIKE :query GROUP BY id_produit";
+        $param = [
+            'query'=>'%'.$var.'%'
+        ];
+        $stmt = $this->db->prepare($request);
+        $stmt->execute($param);
+        $dataAll = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($dataAll as $dataOne) {
+            $produit = new Produit();
+            $produit->setId($dataOne['id_produit']);
+            $produit->setNom($dataOne['nom']);
+            $produit->setDesc($dataOne['description']);
+            $produit->setPrix($dataOne['prix']);
+            $produit->setImage($dataOne['image']);
+            $produitAll[] = $produit;
+        }
+
+        return $produitAll;
+    }
+
     // AFFICHE UN ELEMENT
     public function getOneCompte($param){
         $request = "SELECT * FROM compte WHERE pseudo = :pseudo";
@@ -104,3 +127,6 @@ Class BoutiqueManager {
         $stmt->execute($param);
     }
 }
+
+
+?>

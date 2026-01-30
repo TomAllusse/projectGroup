@@ -48,14 +48,14 @@
         <input type="search" name="q" id="shopSearch" placeholder="Rechercher sur le site…">
     </div>
     <!-- PRODUIT -->
-    <div class="cloth">
+    <div class="product">
         <?php
             $manager = new BoutiqueManager($db);
             $dataAll = $manager->getAll();
 
             foreach($dataAll as $aProduct){
                 ?>
-                    <div class="aCloth">
+                    <div class="aProduct">
                         <img src="<?php echo htmlspecialchars($aProduct->getImage()); ?>" alt="<?php echo htmlspecialchars($aProduct->getDesc()); ?>">
                         <div class="ligne">
                             <h1 class="nameProduct"><?php echo htmlspecialchars($aProduct->getNom()); ?></h1>

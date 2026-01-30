@@ -33,3 +33,5 @@ Class Grade extends Produit {
         return $this;
     }
 }
+
+?>

@@ -38,3 +38,5 @@ class Arme extends Produit
         return $this;
     }
 }
+
+?>

@@ -10,12 +10,13 @@
 .productTitleForm {
     font-size: 3.125em;
     text-align: center;
+    background-color: transparent;
 }
 
 /* FORM PRODUCT */
 
 .productTitleForm {
-    color: #4B3621;
+   color: #F2E9E4;;
     padding: 25px 0;
     border-top: 0;
     border-bottom: 5px;
@@ -27,9 +28,16 @@
 
 .productForm {
     padding: 25px;
+    background-color:rgba(45, 45, 45, 0.85);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border: 3px solid #4B3621;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    transition: transform 0.2s ease;
 }
 
-.nameInp, textarea, .brandInp, .priceInp {
+.nameInp, textarea, .brandInp, .priceInp, .toggle-content input {
     display: block;
     margin: 20px auto;
     outline: 0;
@@ -42,7 +50,7 @@
     border-radius: 3px;
 }
 
-.nameInp, .brandInp, .priceInp {
+.nameInp, .brandInp, .priceInp, .toggle-content input{
     border-bottom: 2.5px solid #4B3621;
 }
 
@@ -50,8 +58,8 @@ textarea {
     border: 2.5px solid #4B3621;
 }
 
-.labelName, .labelBrand, .labelPrice, .labelComposition, .labelColor, .labelDesc, .labelCategory, .labelPattern, .labelSize {
-    color: #4B3621;
+.labelName, .labelBrand, .labelPrice, .labelComposition, .labelColor, .labelDesc, .labelCategory, .labelPattern, .labelSize, .toggle-content label {
+    color: #F2E9E4;;
     display: block;
     margin: 0 auto;
     width: 95%;
@@ -74,6 +82,16 @@ textarea {
     border-bottom: 2.5px solid #4B3621;
 }
 
+.checkbox{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.checkbox input{
+margin: 10px;
+}
+
 .selectBox select {
     width: 100%;
     font-size: 0.875em;
@@ -91,7 +109,7 @@ textarea {
 }
 
 #checkboxes {
-    display: none;
+    display: flex;
     position: relative;
     background: #4B3621;
     cursor: pointer;
@@ -100,6 +118,9 @@ textarea {
     width: 95%;
     box-sizing: border-box;
     border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+
 }
 
 #checkboxes label {
@@ -188,7 +209,7 @@ textarea {
 
 .addProduct2, .addProduct img, .addProduct span  {
     cursor: pointer;
-    color: #4B3621;
+    color: #F2E9E4;
 }
 
 .addProduct2 {
@@ -320,7 +341,7 @@ textarea {
     display: block;
     margin: 0 auto;
     text-align: center;
-    color: #4B3621;
+    color: #F2E9E4;;
     font-size: 1.5em;
 }
 
