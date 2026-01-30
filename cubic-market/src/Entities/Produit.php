@@ -3,16 +3,15 @@
 namespace src\Entities;
 
 Class Produit {
+    private $id;
     private $nom;
     private $desc;
     private $prix;
     private $image;
 
-    public function __construct($nom, $desc, $prix, $image) {
-        $this->nom = $nom;
-        $this->desc = $desc;
-        $this->prix = $prix;
-        $this->image = $image;
+    public function getId()
+    {
+        return $this->id;
     }
 
     public function getNom()
@@ -35,28 +34,35 @@ Class Produit {
         return $this->image;
     }
 
-    public function setNom($nom): self
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this->id;
+    }
+
+    public function setNom($nom)
     {
         $this->nom = $nom;
 
         return $this;
     }
 
-    public function setDesc($desc): self
+    public function setDesc($desc)
     {
         $this->desc = $desc;
 
         return $this;
     }
 
-    public function setPrix($prix): self
+    public function setPrix($prix)
     {
         $this->prix = $prix;
 
         return $this;
     }
 
-    public function setImage($image): self
+    public function setImage($image)
     {
         $this->image = $image;
 

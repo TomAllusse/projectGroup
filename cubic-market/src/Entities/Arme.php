@@ -1,17 +1,40 @@
 <?php
 
+namespace src\Entities;
 
 class Arme extends Produit
 {
+    private $idarme;
     private $degat;
     private $durabilite;
 
-    public function __construct($nom, $desc, $prix, $image, $degat, $durabilite){
-        $this->date_creation = $date_creation;
+    /*public function __construct($nom, $desc, $prix, $image, $degat, $durabilite){
+        parent::__construct($nom, $desc, $prix, $image);
+        $this->degat = $degat;
+        $this->durabilite = $durabilite;
+    }
+    */
+    public function getDegat()
+    {
+        $this->degat;
     }
 
-    public function getdurabilite()
+    public function getDurabilite()
     {
-        return $this->durabilite;
+        $this->durabilite;
+    }
+   
+    public function setProtection($degat)
+    {
+        $this->degat = $degat;
+
+        return $this;
+    }
+
+    public function setDurabilite($durabilite)
+    {
+        $this->durabilite = $durabilite;
+
+        return $this;
     }
 }

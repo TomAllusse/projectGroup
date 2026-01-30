@@ -1,0 +1,467 @@
+.productContainer{
+    margin: 50px;
+    border: 5px solid #4B3621;
+}
+
+.productBoxInfo{
+    background: #4B3621;
+}
+
+.productTitleForm {
+    font-size: 3.125em;
+    text-align: center;
+}
+
+/* FORM PRODUCT */
+
+.productTitleForm {
+    color: #4B3621;
+    padding: 25px 0;
+    border-top: 0;
+    border-bottom: 5px;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    border-color: #4B3621;
+}
+
+.productForm {
+    padding: 25px;
+}
+
+.nameInp, textarea, .brandInp, .priceInp {
+    display: block;
+    margin: 20px auto;
+    outline: 0;
+    background: none;
+    width: 95%;
+    border: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 0.875em;
+    border-radius: 3px;
+}
+
+.nameInp, .brandInp, .priceInp {
+    border-bottom: 2.5px solid #4B3621;
+}
+
+textarea {
+    border: 2.5px solid #4B3621;
+}
+
+.labelName, .labelBrand, .labelPrice, .labelComposition, .labelColor, .labelDesc, .labelCategory, .labelPattern, .labelSize {
+    color: #4B3621;
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    position: relative;
+    top: 7px;
+    text-align: center;
+}
+
+/* SELECT SIZE */
+
+.selectBox {
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    outline: 0;
+    background: none;
+    width: 95%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border-bottom: 2.5px solid #4B3621;
+}
+
+.selectBox select {
+    width: 100%;
+    font-size: 0.875em;
+    background: transparent;
+    border: 0;
+    padding: 15px;
+    color: rgb(117, 117, 117);
+}
+
+.overSelect {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes {
+    display: none;
+    position: relative;
+    background: #4B3621;
+    cursor: pointer;
+    margin: 20px auto;
+    outline: 0;
+    width: 95%;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+#checkboxes label {
+    display: block;
+    margin: 5px auto;
+    background: #4B3621;
+    cursor: pointer;
+    outline: 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+#checkboxes label:hover {
+    background-color: #A07855;
+}
+
+/* BUTTON PRODUCT */
+
+.sendProduct {
+    width: 40%;
+    background: #A07855;
+    border: 2px solid #31211b;
+    display: block;
+    margin: 25px auto 0 auto;
+    outline: none;
+    height: 50px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.sendProduct:hover {
+    color: #fff;
+    background: #4B3621;
+}
+/* MESSAGE VALIDATE PRODUCT */
+
+.message-validate-product {
+    display: none;
+    margin: 25px auto 0 auto;
+    justify-content: center;
+    align-items: center;
+    animation: validate 2.5s linear 0s 1 normal;
+}
+
+@keyframes validate {
+    from{
+        color: green;
+    }
+    to{
+        color: green;
+    }
+}
+
+/* ADD PRODUCT IMAGE */
+
+.addAndDisplayProduct {
+    margin: 0 50px 0 50px;
+    padding-top: 50px;
+    display: flex;
+    height: 665px;
+}
+
+.addProduct {
+    width: calc(100% - 500px);
+    height: 500px;
+    margin: 75px;
+}
+
+.custom-file-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.addProduct img{
+    width: 50px;
+    height: auto;
+    position: relative;
+}
+
+.addProduct2, .addProduct img, .addProduct span  {
+    cursor: pointer;
+    color: #4B3621;
+}
+
+.addProduct2 {
+    display: none;
+}
+
+.displayProduct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayProduct img{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    image-rendering: auto;
+}
+
+.descImgProductInp {
+    resize: none;
+    height: 80px;
+}
+
+
+.btn-product-container {
+    display: flex;
+    padding: 25px;
+    justify-content: center;
+    gap: 75px;
+}
+
+.btn-product-container img {
+    width: 60px;
+}
+
+#validate-product, #cancel-product {
+    cursor: pointer;
+}
+
+.validate {    
+    display: none;
+}
+
+.message-validate-product {
+    display: none;
+    height: 110px;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    animation: validate 2.5s linear 0s 1 normal;
+}
+
+@keyframes validate {
+    from{
+        color: green;
+    }
+    to{
+        color: green;
+    }
+}
+
+.cancel {
+    display: none;
+}
+
+.message-cancel-product {
+    display: none;
+    height: 110px;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    animation: cancel 2.5s linear 0s 1 normal;
+}
+
+@keyframes cancel {
+    from{
+        color: red;
+    }
+    to{
+        color: red;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.ProductInp{
+    text-align: center;
+    display: block;
+    margin: 50px auto 0;
+    background: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 0.875em;
+    border-radius: 3px;
+    border-width: 0 0 2.5px 0;
+    border-style: solid;
+    border-color: #4B3621;
+    color: #4B3621;
+}
+
+.ProductInp{
+    resize: none;
+    height: 60px;
+    border-width: 2.5px;
+}
+
+.container-file-upload-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+}
+
+.TitlePicture{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #4B3621;
+    font-size: 1.5em;
+}
+
+.container-desc-product{
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+
+/* ========= Télévision (min 1920px) ========= */
+@media screen and (min-width: 1920px) {
+    .displayProduct img {
+        width: 600px;
+        height: 600px;
+    }
+
+    .TitlePicture{
+        font-size: 2em;
+    }
+
+    .nameInp, textarea, .brandInp, .priceInp, .selectBox select {
+        font-size: 1.25em;
+    }
+
+    .custom-file-upload span, .labelName, .labelBrand, .labelPrice, .labelComposition, .labelColor, .labelDesc, .labelCategory, .labelPattern, .labelSize {
+        font-size: 1.55em;
+    }
+
+    .sendProduct {
+        font-size: 1.65em;
+    }
+}
+
+/* ========= Ordinateur (max 1440px) ========= */
+@media screen and (max-width: 1440px) {
+    .addProduct {
+        margin: 25px 10px;
+        width: 100%;
+    }
+
+    .displayProduct img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* ========= Tablettes / Petits Ordinateurs (max 1024px) ========= */
+@media screen and (max-width: 1024px) {
+    .addProduct {
+        margin: 10px;
+    }
+
+    .displayProduct img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .container-file-upload-product, .addAndDisplayProduct, .addProduct {
+        height: auto;
+    }
+    
+    .custom-file-upload {
+        padding: 30px 20px;
+    }
+
+    .addAndDisplayProduct {
+        padding-top: 10px;
+        display: block;
+    }
+
+    .descImgProductInp {
+        margin-top: 15px;
+        max-height: 60px;
+    }
+
+    .nameInp, textarea, .brandInp, .priceInp, .selectBox select {
+        font-size: 0.6em;
+    }
+
+    .sendProduct {
+        font-size: 0.8em;
+    }
+}
+
+/* ========= Tablettes Portrait (max 768px) ========= */
+@media screen and (max-width: 768px) {
+    .productTitleForm {
+        font-size: 1.9em;
+    }
+
+    .displayProduct img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .addProduct {
+        width: auto;
+    }
+
+    .addAndDisplayProduct {
+        margin: auto;
+    }
+
+    .TitlePicture{
+        font-size: 1.2em;
+    }
+
+    .custom-file-upload span, .labelName, .labelBrand, .labelPrice, .labelComposition, .labelColor, .labelDesc, .labelCategory, .labelPattern, .labelSize {
+        font-size: 0.7em;
+    }
+}
+
+/* ========= Mobiles (max 425px) ========= */
+@media screen and (max-width: 425px) {
+    .productTitleForm {
+        font-size: 1.2em;
+    }
+
+    .addProduct img{
+        width: 40px;
+    }
+
+    .TitlePicture{
+        font-size: 0.8em;
+    }
+
+    .custom-file-upload span, .labelName, .labelBrand, .labelPrice, .labelComposition, .labelColor, .labelDesc, .labelCategory, .labelPattern, .labelSize {
+        font-size: 0.55em;
+    }
+
+    .nameInp, textarea, .brandInp, .priceInp, .selectBox select {
+        font-size: 0.5em;
+    }
+
+    .displayProduct img {
+        width: 150px;
+        height: 150px;
+    }
+
+    
+    .sendProduct {
+        font-size: 0.6em;
+    }
+}

@@ -1,0 +1,210 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Alice", sans-serif;
+    color: #4B3621;
+    text-transform: uppercase;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background: #4f801e;
+    justify-content: center;
+    height: 100vh;
+}
+
+textarea{
+    resize: none;
+}
+
+/* NAVBAR */
+
+nav {
+    position: relative;
+    height: 70px;
+    width: 100%;
+    z-index: 10;
+    background-color: #A07855;
+}
+
+.list-nav {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+}
+
+.item-nav {
+    display: inline-block;
+    line-height: 70px;
+    font-size: 30px;
+    margin: 0 20px;
+}
+
+.link-nav {
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-bottom 0s ease-out;
+    font-weight: bolder;
+}
+
+.link-nav:hover{
+    border-color: #4B3621;
+    border-style: solid;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 2px;
+}
+
+.btn-toggle-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: none;
+}
+
+.btn-toggle-container img {
+    width: 40px;
+    cursor: pointer;
+}
+
+.active{
+    display: none;
+}
+
+/* FOOTER */
+
+footer{
+    height: 70px;
+    width: 100%; 
+    line-height: 70px;
+    font-size: 25px;
+    padding: 0 20px;
+    background:#4B3621;
+    color:#A07855;
+    text-align: right;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+/* RESPONSIVE */
+
+/* --- Télévision (max 1920px) --- */
+@media screen and (min-width: 1920px) {
+    nav {
+        height: 100px;
+    }
+
+    .item-nav {
+        line-height: 100px;
+        font-size: 40px;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    /* NAVBAR */
+
+    nav {
+        height: 70px;
+        width: 100%;
+    }
+
+    .list-nav {
+        width: 100%;
+        height: 100%;
+        text-align: right;
+    }
+
+    .item-nav {
+        display: inline-block;
+        line-height: 70px;
+        font-size: 30px;
+        margin: 0 20px;
+        text-align: center;
+    }
+
+    .link-nav {
+        text-decoration: none;
+        transition: border-bottom 0s ease-out;
+        color: #4f801e;
+    }
+
+    .link-nav:hover{
+        border-color: #000;
+        border-style: solid;
+        border-top-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+        border-bottom-width: 2px;
+    }
+
+    .active{
+        display: none;
+    }
+
+    .btn-toggle-container {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: none;
+    }
+
+    .btn-toggle-container img {
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .btn-toggle-container {
+        display: block;
+    }
+
+    .list-nav {
+        position: relative;
+        top: 70px;
+        display: none;
+    }
+
+    .item-nav {
+        display: block;
+        background-color: #333;
+        margin: 0;
+    }
+
+    nav.active-menu{
+        background-color: #333;
+        border-bottom: 1px solid #000;
+    }
+
+    .list-nav.active-menu {
+        display: block;
+    }
+
+    .inactive.active-menu{
+        display: none;
+    }
+
+    .active.active-menu{
+        display: block;
+    }
+
+    footer {
+        font-size: 15px;
+    }
+
+}
+
+/* --- ÉTAPE 3 : Mobiles (max 425px) --- */
+@media screen and (max-width: 425px) {
+
+    footer {
+        height: 50px;
+        width: 100%; 
+        line-height: 50px;
+        font-size: 10px;
+    }
+}

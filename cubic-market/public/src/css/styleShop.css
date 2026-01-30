@@ -1,0 +1,235 @@
+.shopBoxSearch {
+    width: 100%;
+    height: auto;
+    background: #A07855;
+}
+
+/* SEARCH */
+
+#shopSearch {
+    width: calc(100% - 20px);
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    border: 4px solid #4B3621;
+    border-radius: 40px;
+    background: #A07855;
+}
+
+#shopSearch:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
+}
+
+#shopSearch:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
+}
+
+#shopSearch:focus {
+    background: rgba(0, 0, 0, 0.75);
+    color: #A07855;;
+}
+
+/* FILTER */
+.container-filter {
+    position: relative;
+    height: 70px;
+    padding: 15px 0;
+}
+
+.btn-toggle-filter {
+    font-size: 30px;
+    margin: 15px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.btn-toggle-filter span img {
+    width: 30px;
+    position: relative;
+    top: 7px;
+}
+
+.btn-toggle-filter.active-filter {
+    display: none;
+}
+
+.shopFilterHide {
+    display: none;
+    position: absolute;
+    top: 0;    /* Se place juste en dessous du parent */
+    z-index: 1;
+}
+
+.list-filter.active-filter {
+    display: block;
+    background: #A07855;
+    width: 100%;
+    height: 100px;
+}
+
+.btn-close-filter{
+    text-align: center;
+}
+
+.btn-close-filter img{
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Cloth */
+
+.cloth {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.aCloth {
+    background: #fff;
+    width: 350px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px #4B3621;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8em;
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+.aCloth img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    background: #A07855;
+    margin-bottom: 0.2em;
+    box-shadow: 0 0 0 0.5px #4B3621;
+}
+
+.ligne {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 50px;
+    margin: 0.5em 0 0.4em 0;
+}
+
+.nameProduct {
+    font-size: 1em;
+    max-width: 75%;
+    width: 100%;
+    color: #4B3621;
+    padding: 0.45em 0.85em;
+    border-radius: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    font-weight: bold;
+    word-break: break-all;
+    line-height: 1.3em;
+}
+
+
+.priceProduct {
+    font-size: 1em;
+    max-width: 25%;
+    color: #4B3621;
+    padding: 0.45em 0.95em;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.aCloth a {
+    display: block;
+    color: #4B3621;
+    font-weight: bold;
+    padding: 0.55em;
+    border-radius: 7px;
+    text-align: center;
+    text-decoration: none;
+    border: 0.5px solid #4B3621;
+    margin-top: 1em;
+    letter-spacing: 0.05em;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 0 0 0.5px transparent;
+}
+.aCloth a:hover {
+    background: #48d04f;
+    box-shadow: 0 0 0 0.5px #48d04f;
+    border-color: #48d04f;
+    color: #4B3621;
+}
+
+/* RESPONSIVE */
+
+/* --- Tablettes / Petits Ordis (max 1024px) --- */
+@media screen and (max-width: 1024px) {
+    .aCloth {
+        width: 200px; /* On réduit légèrement la largeur des cartes */
+    }
+
+    .nameProduct {
+        font-size: 0.75em;
+        max-width: 70%;
+        -webkit-line-clamp: 3;
+    }
+
+
+    .priceProduct {
+        font-size: 0.75em;
+        max-width: 30%;
+    }
+
+    #shopSearch {
+        font-size: 24px; /* Un peu plus petit pour l'accessibilité */
+    }
+
+}
+
+/* --- ÉTAPE 3 : Mobiles (max 425px) --- */
+@media screen and (max-width: 425px) {
+    #shopSearch {
+        font-size: 20px;
+        border-radius: 20px;
+        margin: 5px;
+        width: calc(100% - 10px);
+    }
+
+    .cloth {
+        gap: 1.5rem;
+    }
+
+    .aCloth {
+        width: 90%; /* Une seule grande carte par ligne sur mobile */
+        margin-bottom: 1em;
+    }
+
+    .btn-toggle-filter {
+        font-size: 22px;
+        text-align: center; /* Plus simple à cliquer sur mobile */
+    }
+
+    .ligne {
+        height: auto; /* Permet au texte de s'étendre si le nom est long */
+        flex-direction: column; 
+        gap: 5px;
+    }
+
+    .nameProduct, .priceProduct {
+        max-width: 100%;
+        padding: 0;
+    }
+}

@@ -1,0 +1,191 @@
+.loginContainer {
+    margin: 25vh auto 50px auto;
+    border: 5px solid #31211b;
+    padding: 30px;
+    width: 80%;
+}
+
+.container-lg {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 span img {
+    width: 50px;
+    position: relative;
+    top: 10px;
+}
+
+.loginForm {
+    padding: 25px;
+}
+
+.usernameInp:focus, .pwdInp:focus {
+    background-color: red !important;
+    border: 2.5px solid #4B3621;
+    color: #31211b;
+}
+
+.usernameInp, .pwdInp {
+    display: block;
+    margin: 20px auto;
+    outline: 0;
+    background: none;
+    width: 95%;
+    border: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2.5px solid #A07855;
+}
+
+.labelUsername, .labelPwd {
+    color: #31211b;
+    font-weight: bolder;
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    position: relative;
+    top: 7px;
+    text-align: center;
+}
+
+.sendLogin {
+    width: 40%;
+    background: #A07855;
+    border: 2px solid #31211b;
+    display: block;
+    margin: 25px auto 0 auto;
+    outline: none;
+    height: 50px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.sendLogin:hover {
+    color: #fff;
+    background: #4B3621;
+}
+
+/* ========= Télévision (min 1920px) ========= */
+@media screen and (min-width: 1920px) {
+    h1 {
+        font-size: 60px;
+    }
+    
+    .loginContainer {
+        padding: 40px;
+    }
+}
+
+/* ========= Tablettes / Petits Ordis (max 1024px) ========= */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    
+    .loginContainer {
+        padding: 25px;
+    }
+    
+    .loginForm {
+        padding: 20px;
+    }
+    
+    .usernameInp, .pwdInp {
+        padding: 18px;
+        font-size: 16px;
+    }
+    
+    .sendLogin {
+        height: 48px;
+        font-size: 16px;
+    }
+}
+
+/* ========= Tablettes Portrait (max 768px) ========= */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+    
+    .loginContainer {
+        padding: 20px;
+        border-width: 3px;
+    }
+    
+    .loginForm {
+        padding: 15px;
+    }
+    
+    .usernameInp, .pwdInp {
+        width: 100%;
+        margin: 18px 0;
+        padding: 20px;
+    }
+    
+    .labelUsername, .labelPwd {
+        width: 100%;
+        top: 5px;
+    }
+    
+    .sendLogin {
+        width: 60%;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+/* ========= Mobiles (max 425px) ========= */
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    h1 span img {
+        width: 40px;
+        top: 8px;
+    }
+    
+    .loginContainer {
+        padding: 15px;
+        border-width: 2px;
+    }
+    
+    .loginForm {
+        padding: 12px;
+    }
+    
+    .usernameInp, .pwdInp {
+        padding: 16px;
+        font-size: 16px; /* Fix zoom iOS */
+        margin: 15px 0;
+    }
+    
+    .labelUsername, .labelPwd {
+        font-size: 14px;
+    }
+    
+    .sendLogin {
+        width: 80%;
+        height: 50px;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
